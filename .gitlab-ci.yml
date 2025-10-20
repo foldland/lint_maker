@@ -1,4 +1,4 @@
-image: dart:stable-sdk
+image: dart:stable-sdk@sha256:8add685872d0d6e9b841ef85b4c42415ae55a5d32b3d7a9dd51f88605c90cce3
 
 stages:
   - lint
@@ -26,7 +26,7 @@ analyze:
 
 pana:
   stage: lint
-  image: ghcr.io/cirruslabs/flutter:stable
+  image: ghcr.io/cirruslabs/flutter:stable@sha256:d268f4fdc50c2d7c55d2f6e5823725db0d424dd6b50502fe4ee0533d5c6afe1f
   script:
     - dart pub get
     - dart run pana --exit-code-threshold 0
