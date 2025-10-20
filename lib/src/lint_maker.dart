@@ -49,7 +49,7 @@ Future<void> runLintMaker() async {
 
   for (final config in configCollection.values) {
     final overrides = config.preset;
-    final disabledRules = (overrides['linter']! as Map)['rules'];
+    final Object? disabledRules = (overrides['linter']! as Map)['rules'];
 
     final rules = <String, Object?>{};
     for (final lintCode in messagesYaml.supportedLintCodes(dartVersion)) {
