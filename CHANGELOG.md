@@ -1,26 +1,23 @@
-## 0.2.3
+# Change Log
 
-- fix lint version file parsing
-- allow analyzer >7.0.0
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## 0.2.2
+## 2026-03-26
 
-- fix lint version file being removed from upstream
+### Changes
 
-## 0.2.1
+---
 
-- specify `executables` in the pubspec to allow direct invocations from the command line
+Packages with breaking changes:
 
-## 0.2.0+1
+ - There are no breaking changes in this release.
 
-- Finish migration to the Debacode organization
-- add CI
+Packages with other changes:
 
-## 0.2.0
+ - [`lint_maker` - `v0.3.1`](#lint_maker---v031)
 
-- Add example to the package
-- Do not interpret a list of rules as disabled. THe config now follows the analysis_options.yaml syntax
+---
 
-## 0.1.0
+#### `lint_maker` - `v0.3.1`
 
-- Initial version.

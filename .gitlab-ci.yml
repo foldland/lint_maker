@@ -1,35 +1,47 @@
-image: dart:stable-sdk@sha256:8add685872d0d6e9b841ef85b4c42415ae55a5d32b3d7a9dd51f88605c90cce3
+include:
+  - project: tools/shared-pipelines
+    ref: v5.0.6
+    file: /base/base.yaml
+  - project: tools/shared-pipelines
+    ref: v5.0.6
+    file: /dart/dart.yaml
 
-stages:
-  - lint
-  - test
+# Prepare
+prepare-precache:
+  extends: .prepare-dart-precache
 
-codespell:
-  stage: lint
-  image:
-    name: $CI_REGISTRY/tools/cspell:latest
+# Analysis - general
+analysis-spell-check:
+  extends: .analysis-base-spell-check
+
+analysis-security:
+  extends: .analysis-base-security
+
+analysis-licenses:
+  extends: .analysis-dart-licenses
+
+analysis-pana:
+  extends: .analysis-dart-packages
+
+analysis-build-runner:
+  extends: .analysis-dart-build-runner
+
+analysis-lint-maker:
+  extends:
+    - .setup-dart-fvm-melos
+  stage: analysis
   script:
-    - cspell .
+    - melos run lint_maker
+    # Fail when changes are detected
+    - git --no-pager diff --exit-code
 
-analyze:
-  stage: lint
-  script:
-    - dart pub get
-    - dart analyze # analyzer linting rules
-    - dart format . --set-exit-if-changed # dart format
-  only:
-    refs:
-      - merge_requests
-    changes:
-      - lib/**/*.dart
-      - test/**/*.dart
+# Analysis -style
+analysis-lint:
+  extends: .analysis-dart-lint
 
-pana:
-  stage: lint
-  image: ghcr.io/cirruslabs/flutter:stable@sha256:d268f4fdc50c2d7c55d2f6e5823725db0d424dd6b50502fe4ee0533d5c6afe1f
-  script:
-    - dart pub get
-    - dart run pana --exit-code-threshold 0
-  only:
-    refs:
-      - merge_requests
+analysis-format:
+  extends: .analysis-dart-format
+
+# Test
+test:
+  extends: .test-dart

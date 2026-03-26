@@ -38,3 +38,4 @@ To update the rules you need to update the execute [lint_maker.dart](bin/lint_ma
 ```sh
 dart pub run lint_maker
 ```
+
