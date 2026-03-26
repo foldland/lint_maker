@@ -1,16 +1,16 @@
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
-import 'package:lint_maker/src/lint_rule.dart';
+import 'package:lint_maker/src/models/models.dart';
 import 'package:version/version.dart';
 
-final Uri _messageDataUrl = Uri.parse(
-  'https://raw.githubusercontent.com/dart-lang/sdk/main/pkg/linter/tool/machine/rules.json',
-);
-
 /// Loads the lint `messages.yaml` from GitHub.
-Future<MessagesData> loadMessagesYaml() async {
-  final lintsResult = await http.get(_messageDataUrl);
+Future<MessagesData> loadMessagesYaml(Version dartVersion) async {
+  final messageDataUrl = Uri.parse(
+    'https://raw.githubusercontent.com/dart-lang/sdk/refs/tags/$dartVersion/pkg/linter/tool/machine/rules.json',
+  );
+
+  final lintsResult = await http.get(messageDataUrl);
 
   Object? rules;
   try {

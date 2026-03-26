@@ -1,0 +1,42 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/streetsidesoftware/cspell/main/packages/cspell-types/cspell.schema.json
+
+version: "0.2"
+language: "en"
+useGitignore: true
+enableGlobDot: false
+ignorePaths:
+  - "**/CHANGELOG.md"
+  - "**/l10n/!(en.arb)"
+dictionaries:
+  # cspell - https://github.com/streetsidesoftware/cspell-dicts
+  - "bash"
+  - "dart"
+  - "docker"
+  - "en_us"
+  - "flutter"
+  - "git"
+  - "softwareTerms"
+  # project
+  - "project"
+  - "project-tools"
+  # custom
+  - "debacode"
+  - "debacode-tools"
+  - "debacode-dart"
+  - "debacode-dart-tools"
+dictionaryDefinitions:
+  # project
+  - name: "project"
+    path: cspell/project.txt
+  - name: "project-tools"
+    path: cspell/project-tools.txt
+  # base
+  - name: "debacode"
+    path: https://gitlab.debacode.de/debacode-public/cspell-dictionaries/-/raw/v1.22.0/base/misc.txt
+  - name: "debacode-tools"
+    path: https://gitlab.debacode.de/debacode-public/cspell-dictionaries/-/raw/v1.22.0/base/tools.txt
+  # dart
+  - name: "debacode-dart"
+    path: https://gitlab.debacode.de/debacode-public/cspell-dictionaries/-/raw/v1.22.0/dart/language.txt
+  - name: "debacode-dart-tools"
+    path: https://gitlab.debacode.de/debacode-public/cspell-dictionaries/-/raw/v1.22.0/dart/tools.txt

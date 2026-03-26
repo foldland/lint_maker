@@ -1,3 +1,0 @@
-pana
-pubignore
-pubspec

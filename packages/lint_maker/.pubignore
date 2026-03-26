@@ -14,7 +14,3 @@ doc/api
 pubspec.lock
 
 coverage/
-
-## pubignore
-
-cspell.json

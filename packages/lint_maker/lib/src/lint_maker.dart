@@ -3,8 +3,8 @@ import 'dart:io';
 
 import 'package:checked_yaml/checked_yaml.dart';
 import 'package:json2yaml/json2yaml.dart';
-import 'package:lint_maker/src/config.dart';
 import 'package:lint_maker/src/messages_data.dart';
+import 'package:lint_maker/src/models/models.dart';
 import 'package:version/version.dart';
 import 'package:yaml/yaml.dart';
 
@@ -30,10 +30,8 @@ Future<void> runLintMaker() async {
         checkedYamlDecode(
           yamlContent,
           (m) => m!.map(
-            (name, value) => MapEntry(
-              name as String,
-              Configuration.fromJson(value! as Map),
-            ),
+            (name, value) =>
+                MapEntry(name as String, Configuration.fromJson(value! as Map)),
           ),
           sourceUrl: file.uri,
         ),
@@ -44,8 +42,8 @@ Future<void> runLintMaker() async {
     }
   }
 
-  final messagesYaml = await loadMessagesYaml();
   final dartVersion = Version.parse(Platform.version.split(' ').first);
+  final messagesYaml = await loadMessagesYaml(dartVersion);
 
   for (final config in configCollection.values) {
     final overrides = config.preset;
@@ -59,12 +57,22 @@ Future<void> runLintMaker() async {
     switch (disabledRules) {
       case YamlList(:final nodes):
         for (final element in nodes) {
-          rules[element.value.toString()] = false;
+          final rule = element.value.toString();
+          if (!rules.containsKey(rule)) {
+            continue;
+          }
+
+          rules[rule] = false;
         }
       case YamlMap(:final nodes):
         for (final MapEntry(key: YamlNode name, value: YamlNode data)
             in nodes.entries) {
-          rules[name.value.toString()] = data.value;
+          final rule = name.value.toString();
+          if (!rules.containsKey(rule)) {
+            continue;
+          }
+
+          rules[rule] = data.value;
         }
       default:
         throw ArgumentError(
