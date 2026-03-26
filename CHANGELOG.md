@@ -15,6 +15,25 @@ Packages with breaking changes:
 
 Packages with other changes:
 
+ - [`lint_maker` - `v0.3.2`](#lint_maker---v032)
+
+---
+
+#### `lint_maker` - `v0.3.2`
+
+
+## 2026-03-26
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
  - [`lint_maker` - `v0.3.1`](#lint_maker---v031)
 
 ---
