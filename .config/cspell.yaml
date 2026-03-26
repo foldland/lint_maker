@@ -32,11 +32,11 @@ dictionaryDefinitions:
     path: cspell/project-tools.txt
   # base
   - name: "debacode"
-    path: https://gitlab.debacode.de/debacode-public/cspell-dictionaries/-/raw/v1.22.0/base/misc.txt
+    path: https://gitlab.debacode.de/debacode-public/cspell-dictionaries/-/raw/v1.24.0/base/misc.txt
   - name: "debacode-tools"
-    path: https://gitlab.debacode.de/debacode-public/cspell-dictionaries/-/raw/v1.22.0/base/tools.txt
+    path: https://gitlab.debacode.de/debacode-public/cspell-dictionaries/-/raw/v1.24.0/base/tools.txt
   # dart
   - name: "debacode-dart"
-    path: https://gitlab.debacode.de/debacode-public/cspell-dictionaries/-/raw/v1.22.0/dart/language.txt
+    path: https://gitlab.debacode.de/debacode-public/cspell-dictionaries/-/raw/v1.24.0/dart/language.txt
   - name: "debacode-dart-tools"
-    path: https://gitlab.debacode.de/debacode-public/cspell-dictionaries/-/raw/v1.22.0/dart/tools.txt
+    path: https://gitlab.debacode.de/debacode-public/cspell-dictionaries/-/raw/v1.24.0/dart/tools.txt
