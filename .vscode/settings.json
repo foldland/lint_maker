@@ -7,5 +7,6 @@
   },
   "files.watcherExclude": {
     "**/.fvm": true
-  }
+  },
+  "markiscodecoverage.searchCriteria": "coverage/filtered.lcov.info"
 }

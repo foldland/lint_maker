@@ -1,10 +1,11 @@
 {
     "recommendations": [
-        "google.arb-editor",
-        "redhat.vscode-yaml",
         "dart-code.flutter",
         "felixangelov.bloc",
-        "streetsidesoftware.code-spell-checker",
         "gitlab.gitlab-workflow",
+        "google.arb-editor",
+        "markis.code-coverage",
+        "redhat.vscode-yaml",
+        "streetsidesoftware.code-spell-checker"
     ]
 }
