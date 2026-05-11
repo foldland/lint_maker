@@ -1,8 +1,8 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "github>debacode/renovate-configs//languages/default#v3.11.0",
-    "github>debacode/renovate-configs//languages/dart#v3.11.0",
-    "github>debacode/renovate-configs//presets/library#v3.11.0"
+    "github>debacode/renovate-configs//languages/default#v3.12.0",
+    "github>debacode/renovate-configs//languages/dart#v3.12.0",
+    "github>debacode/renovate-configs//presets/library#v3.12.0"
   ]
 }
