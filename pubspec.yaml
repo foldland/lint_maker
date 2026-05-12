@@ -21,7 +21,7 @@ dev_dependencies:
 melos:
   repository:
     type: gitlab
-    origin: https://gitlab.debacode.de
+    origin: https://gitlab.fold.land
     owner: tools
     name: dart_lint_maker
 
@@ -73,5 +73,5 @@ melos:
       description: Generate build output for every package.
       run: dart run build_runner build --workspace
     lint_maker:
-      description: Run lint_maker to update debacode_lints.
+      description: Run lint_maker to update lints.
       run: dart run lint_maker
