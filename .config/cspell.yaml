@@ -20,10 +20,10 @@ dictionaries:
   - "project"
   - "project-tools"
   # custom
-  - "debacode"
-  - "debacode-tools"
-  - "debacode-dart"
-  - "debacode-dart-tools"
+  - "foldland"
+  - "foldland-tools"
+  - "foldland-dart"
+  - "foldland-dart-tools"
 dictionaryDefinitions:
   # project
   - name: "project"
@@ -31,12 +31,12 @@ dictionaryDefinitions:
   - name: "project-tools"
     path: cspell/project-tools.txt
   # base
-  - name: "debacode"
-    path: https://gitlab.debacode.de/debacode-public/cspell-dictionaries/-/raw/v1.25.0/base/misc.txt
-  - name: "debacode-tools"
-    path: https://gitlab.debacode.de/debacode-public/cspell-dictionaries/-/raw/v1.25.0/base/tools.txt
+  - name: "foldland"
+    path: https://cspell.foldland.io/v1.25.0/base/misc.txt
+  - name: "foldland-tools"
+    path: https://cspell.foldland.io/v1.25.0/base/tools.txt
   # dart
-  - name: "debacode-dart"
-    path: https://gitlab.debacode.de/debacode-public/cspell-dictionaries/-/raw/v1.25.0/dart/language.txt
-  - name: "debacode-dart-tools"
-    path: https://gitlab.debacode.de/debacode-public/cspell-dictionaries/-/raw/v1.25.0/dart/tools.txt
+  - name: "foldland-dart"
+    path: https://cspell.foldland.io/v1.25.0/dart/language.txt
+  - name: "foldland-dart-tools"
+    path: https://cspell.foldland.io/v1.25.0/dart/tools.txt
