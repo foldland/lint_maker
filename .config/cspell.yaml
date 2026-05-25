@@ -32,11 +32,11 @@ dictionaryDefinitions:
     path: cspell/project-tools.txt
   # base
   - name: "foldland"
-    path: https://cspell.foldland.io/v1.25.1/base/misc.txt
+    path: https://cspell.foldland.io/v1.25.3/base/misc.txt
   - name: "foldland-tools"
-    path: https://cspell.foldland.io/v1.25.1/base/tools.txt
+    path: https://cspell.foldland.io/v1.25.3/base/tools.txt
   # dart
   - name: "foldland-dart"
-    path: https://cspell.foldland.io/v1.25.1/dart/language.txt
+    path: https://cspell.foldland.io/v1.25.3/dart/language.txt
   - name: "foldland-dart-tools"
-    path: https://cspell.foldland.io/v1.25.1/dart/tools.txt
+    path: https://cspell.foldland.io/v1.25.3/dart/tools.txt
