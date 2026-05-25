@@ -1,8 +1,8 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "https://renovate-presets.foldland.io/v3.14.3/languages/default.json",
-    "https://renovate-presets.foldland.io/v3.14.3/languages/dart.json",
-    "https://renovate-presets.foldland.io/v3.14.3/presets/library.json"
+    "https://renovate-presets.foldland.io/v3.14.7/languages/default.json",
+    "https://renovate-presets.foldland.io/v3.14.7/languages/dart.json",
+    "https://renovate-presets.foldland.io/v3.14.7/presets/library.json"
   ]
 }
