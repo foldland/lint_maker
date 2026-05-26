@@ -13,10 +13,12 @@ default:
     linter:
       rules:
         always_specify_types: false
-        avoid_print: false
-        prefer_double_quotes: false
-        prefer_relative_imports: false
-        unnecessary_final: false
-        prefer_final_parameters: false
-        prefer_expression_function_bodies: false
         avoid_catches_without_on_clauses: false
+        avoid_print: false
+        omit_obvious_property_types: false
+        prefer_double_quotes: false
+        prefer_expression_function_bodies: false
+        prefer_final_parameters: false
+        prefer_relative_imports: false
+        specify_nonobvious_local_variable_types: false
+        unnecessary_final: false

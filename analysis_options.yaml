@@ -103,7 +103,7 @@ linter:
     no_leading_underscores_for_local_identifiers: true
     no_literal_bool_comparisons: true
     no_logic_in_create_state: true
-    no_runtimeType_toString: true
+    no_runtimetype_tostring: true
     no_self_assignments: true
     no_wildcard_variable_uses: true
     non_constant_identifier_names: true
@@ -111,6 +111,8 @@ linter:
     null_check_on_nullable_type_parameter: true
     null_closures: true
     omit_local_variable_types: true
+    omit_obvious_local_variable_types: true
+    omit_obvious_property_types: false
     one_member_abstracts: true
     only_throw_errors: true
     overridden_fields: true
@@ -146,7 +148,7 @@ linter:
     prefer_is_empty: true
     prefer_is_not_empty: true
     prefer_is_not_operator: true
-    prefer_iterable_whereType: true
+    prefer_iterable_wheretype: true
     prefer_mixin: true
     prefer_null_aware_method_calls: true
     prefer_null_aware_operators: true
@@ -169,6 +171,8 @@ linter:
     sort_constructors_first: true
     sort_pub_dependencies: true
     sort_unnamed_constructors_first: true
+    specify_nonobvious_local_variable_types: false
+    specify_nonobvious_property_types: true
     strict_top_level_inference: true
     switch_on_type: true
     test_types_in_equals: true
@@ -227,4 +231,5 @@ linter:
     use_to_and_as_if_applicable: true
     use_truncating_division: true
     valid_regexps: true
+    var_with_no_type_annotation: true
     void_checks: true
