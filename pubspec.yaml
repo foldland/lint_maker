@@ -16,7 +16,7 @@ dev_dependencies:
   build_runner: ^2.11.0
   lint_maker:
     path: packages/lint_maker
-  melos: ^7.1.1
+  melos: ^8.0.0
 
 melos:
   repository:
@@ -41,16 +41,16 @@ melos:
   scripts:
     test:
       description: Tests all packages with coverage.
-      run: flutter test --coverage --reporter=expanded
       exec:
+        command: flutter test --coverage --reporter=expanded
         concurrency: 1
         failFast: true
       packageFilters:
         dirExists: test
     test:transform_coverage:
       description: (Internal) transforms the coverage to be collected.
-      run: dart pub global run coverde filter --input coverage/lcov.info --output MELOS_ROOT_PATH/coverage/filtered.lcov.info --base-directory MELOS_ROOT_PATH --filters '\.g\.dart,lib/src/generated'
       exec:
+        command: dart pub global run coverde filter --input coverage/lcov.info --output MELOS_ROOT_PATH/coverage/filtered.lcov.info --base-directory MELOS_ROOT_PATH --filters '\.g\.dart,lib/src/generated'
         concurrency: 1
       packageFilters:
         fileExists: coverage/lcov.info
@@ -63,8 +63,8 @@ melos:
         dart pub global run cobertura show -i coverage/filtered.lcov.info
     pana:
       description: Run the dart package analysis.
-      run: dart pub global run pana --exit-code-threshold 10 --flutter-sdk MELOS_ROOT_PATH/.fvm/flutter_sdk
       exec:
+        command: dart pub global run pana --exit-code-threshold 10 --flutter-sdk MELOS_ROOT_PATH/.fvm/flutter_sdk
         concurrency: 1
         failFast: true
       packageFilters:
