@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2026-07-07
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`lint_maker` - `v0.3.3+3`](#lint_maker---v0333)
+
+---
+
+#### `lint_maker` - `v0.3.3+3`
+
+ - **REFACTOR**: remove analyzer dependency. (dbb7c675)
+
+
 ## 2026-04-27
 
 ### Changes

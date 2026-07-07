@@ -1,3 +1,7 @@
+## 0.3.3+3
+
+ - **REFACTOR**: remove analyzer dependency. (dbb7c675)
+
 ## 0.3.2+2
 
  - **CHORE**: allow analyzer 13
