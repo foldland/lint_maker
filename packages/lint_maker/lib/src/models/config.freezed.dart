@@ -208,7 +208,7 @@ return $default(_that.preset,_that.output);case _:
 
 @JsonSerializable(anyMap: true, checked: true, disallowUnrecognizedKeys: true, explicitToJson: true)
 class _Configuration implements Configuration {
-  const _Configuration({required final  Map<String, Object> preset, this.output = file_paths.analysisOptionsYaml}): _preset = preset;
+  const _Configuration({required final  Map<String, Object> preset, this.output = 'analysis_options.yaml'}): _preset = preset;
   factory _Configuration.fromJson(Map<String, dynamic> json) => _$ConfigurationFromJson(json);
 
 /// Preset options.
