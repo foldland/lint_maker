@@ -16,7 +16,7 @@ _Configuration _$ConfigurationFromJson(Map json) =>
         ),
         output: $checkedConvert(
           'output',
-          (v) => v as String? ?? file_paths.analysisOptionsYaml,
+          (v) => v as String? ?? 'analysis_options.yaml',
         ),
       );
       return val;

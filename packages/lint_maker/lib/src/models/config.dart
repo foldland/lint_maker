@@ -1,7 +1,3 @@
-// ignore_for_file: document_ignores
-
-// ignore: implementation_imports
-import 'package:analyzer/src/util/file_paths.dart' as file_paths;
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'config.freezed.dart';
@@ -25,7 +21,7 @@ sealed class Configuration with _$Configuration {
     /// Path of the output file.
     ///
     /// Defaults to `analysis_options.yaml`.
-    @Default(file_paths.analysisOptionsYaml) String output,
+    @Default('analysis_options.yaml') String output,
   }) = _Configuration;
 
   /// Creates a new configuration from a [json] map.
