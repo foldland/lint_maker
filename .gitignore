@@ -16,7 +16,7 @@ packages/**/*.iml
 packages/**/*.symbols
 packages/**/*.log
 **/coverage
+**/test/optimized_test.dart
 # Conventional directory for build outputs.
 packages/**/build
 packages/**/doc/api
-

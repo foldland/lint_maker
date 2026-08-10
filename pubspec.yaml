@@ -42,7 +42,9 @@ melos:
     test:
       description: Tests all packages with coverage.
       exec:
-        command: flutter test --coverage --reporter=expanded
+        command: >
+          dart pub global run coverde optimize-tests --exclude '**/fixtures/**' --include 'test/**_test.dart' --output test/optimized_test.dart &&
+          dart test --coverage-path coverage/lcov.info --coverage-package MELOS_PACKAGE_NAME --test-randomize-ordering-seed random test/optimized_test.dart
         concurrency: 1
         failFast: true
       packageFilters:
@@ -50,21 +52,22 @@ melos:
     test:transform_coverage:
       description: (Internal) transforms the coverage to be collected.
       exec:
-        command: dart pub global run coverde filter --input coverage/lcov.info --output MELOS_ROOT_PATH/coverage/filtered.lcov.info --base-directory MELOS_ROOT_PATH --filters '\.g\.dart,lib/src/generated'
+        command: dart pub global run coverde transform --input coverage/lcov.info --output "$MELOS_ROOT_PATH/coverage/filtered.lcov.info" --transformations skip-by-glob="**/*.g.dart" --transformations skip-by-glob="lib/src/generated/**"
         concurrency: 1
       packageFilters:
         fileExists: coverage/lcov.info
     test:collect_coverage:
       description: Merge all packages coverage trace files ignoring data related to generated files.
       run: >
-        dart pub global run coverde rm --no-dry-run MELOS_ROOT_PATH/coverage/filtered.lcov.info &&
+        dart pub global run coverde rm --no-dry-run "$MELOS_ROOT_PATH/coverage/filtered.lcov.info" &&
+        mkdir -p "$MELOS_ROOT_PATH/coverage" &&
         melos run test:transform_coverage --no-select &&
         dart pub global run cobertura convert -i coverage/filtered.lcov.info &&
         dart pub global run cobertura show -i coverage/filtered.lcov.info
     pana:
       description: Run the dart package analysis.
       exec:
-        command: dart pub global run pana --exit-code-threshold 10 --flutter-sdk MELOS_ROOT_PATH/.fvm/flutter_sdk
+        command: dart pub global run pana --exit-code-threshold 10 --flutter-sdk "$MELOS_ROOT_PATH/.fvm/flutter_sdk"
         concurrency: 1
         failFast: true
       packageFilters:
