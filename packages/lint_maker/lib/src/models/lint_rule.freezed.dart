@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'lint_rule.dart';
@@ -9,6 +9,7 @@ part of 'lint_rule.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
@@ -66,7 +67,7 @@ class _$LintRuleCopyWithImpl<$Res>
 /// Create a copy of LintRule
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? name = null,Object? description = null,Object? categories = null,Object? state = null,Object? incompatible = null,Object? sets = null,Object? fixStatus = null,Object? details = null,Object? sinceDartSdk = null,}) {
-  return _then(_self.copyWith(
+  return _then(LintRule(
 name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
 as String,description: null == description ? _self.description : description // ignore: cast_nullable_to_non_nullable
 as String,categories: null == categories ? _self.categories : categories // ignore: cast_nullable_to_non_nullable
@@ -211,7 +212,7 @@ return $default(_that.name,_that.description,_that.categories,_that.state,_that.
 @JsonSerializable()
 
 class _LintRule implements LintRule {
-  const _LintRule({required this.name, required this.description, required final  List<String> categories, required this.state, required final  List<String> incompatible, required final  List<String> sets, required this.fixStatus, required this.details, required this.sinceDartSdk}): _categories = categories,_incompatible = incompatible,_sets = sets;
+  const _LintRule({required this.name, required this.description, required  List<String> categories, required this.state, required  List<String> incompatible, required  List<String> sets, required this.fixStatus, required this.details, required this.sinceDartSdk}): _categories = categories,_incompatible = incompatible,_sets = sets;
   factory _LintRule.fromJson(Map<String, dynamic> json) => _$LintRuleFromJson(json);
 
 @override final  String name;
