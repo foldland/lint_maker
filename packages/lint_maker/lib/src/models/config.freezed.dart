@@ -33,16 +33,21 @@ $ConfigurationCopyWith<Configuration> get copyWith => _$ConfigurationCopyWithImp
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is Configuration&&const DeepCollectionEquality().equals(other.preset, preset)&&(identical(other.output, output) || other.output == output));
+  final _this = this as Configuration;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is Configuration&&const DeepCollectionEquality().equals(other.preset, _this.preset)&&(identical(other.output, _this.output) || other.output == _this.output));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(preset),output);
+int get hashCode {
+  final _this = this as Configuration;
+  return Object.hash(runtimeType,const DeepCollectionEquality().hash(_this.preset),_this.output);
+}
 
 @override
 String toString() {
-  return 'Configuration(preset: $preset, output: $output)';
+  final _this = this as Configuration;
+  return 'Configuration(preset: ${_this.preset}, output: ${_this.output})';
 }
 
 
@@ -239,16 +244,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Configuration&&const DeepCollectionEquality().equals(other._preset, _preset)&&(identical(other.output, output) || other.output == output));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _Configuration&&const DeepCollectionEquality().equals(other.preset, _preset)&&(identical(other.output, output) || other.output == output));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(_preset),output);
+int get hashCode {
+    return Object.hash(runtimeType,const DeepCollectionEquality().hash(_preset),output);
+}
 
 @override
 String toString() {
-  return 'Configuration(preset: $preset, output: $output)';
+    return 'Configuration(preset: $preset, output: $output)';
 }
 
 
