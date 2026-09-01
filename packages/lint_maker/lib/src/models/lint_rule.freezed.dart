@@ -29,16 +29,21 @@ $LintRuleCopyWith<LintRule> get copyWith => _$LintRuleCopyWithImpl<LintRule>(thi
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is LintRule&&(identical(other.name, name) || other.name == name)&&(identical(other.description, description) || other.description == description)&&const DeepCollectionEquality().equals(other.categories, categories)&&(identical(other.state, state) || other.state == state)&&const DeepCollectionEquality().equals(other.incompatible, incompatible)&&const DeepCollectionEquality().equals(other.sets, sets)&&(identical(other.fixStatus, fixStatus) || other.fixStatus == fixStatus)&&(identical(other.details, details) || other.details == details)&&(identical(other.sinceDartSdk, sinceDartSdk) || other.sinceDartSdk == sinceDartSdk));
+  final _this = this as LintRule;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is LintRule&&(identical(other.name, _this.name) || other.name == _this.name)&&(identical(other.description, _this.description) || other.description == _this.description)&&const DeepCollectionEquality().equals(other.categories, _this.categories)&&(identical(other.state, _this.state) || other.state == _this.state)&&const DeepCollectionEquality().equals(other.incompatible, _this.incompatible)&&const DeepCollectionEquality().equals(other.sets, _this.sets)&&(identical(other.fixStatus, _this.fixStatus) || other.fixStatus == _this.fixStatus)&&(identical(other.details, _this.details) || other.details == _this.details)&&(identical(other.sinceDartSdk, _this.sinceDartSdk) || other.sinceDartSdk == _this.sinceDartSdk));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,name,description,const DeepCollectionEquality().hash(categories),state,const DeepCollectionEquality().hash(incompatible),const DeepCollectionEquality().hash(sets),fixStatus,details,sinceDartSdk);
+int get hashCode {
+  final _this = this as LintRule;
+  return Object.hash(runtimeType,_this.name,_this.description,const DeepCollectionEquality().hash(_this.categories),_this.state,const DeepCollectionEquality().hash(_this.incompatible),const DeepCollectionEquality().hash(_this.sets),_this.fixStatus,_this.details,_this.sinceDartSdk);
+}
 
 @override
 String toString() {
-  return 'LintRule(name: $name, description: $description, categories: $categories, state: $state, incompatible: $incompatible, sets: $sets, fixStatus: $fixStatus, details: $details, sinceDartSdk: $sinceDartSdk)';
+  final _this = this as LintRule;
+  return 'LintRule(name: ${_this.name}, description: ${_this.description}, categories: ${_this.categories}, state: ${_this.state}, incompatible: ${_this.incompatible}, sets: ${_this.sets}, fixStatus: ${_this.fixStatus}, details: ${_this.details}, sinceDartSdk: ${_this.sinceDartSdk})';
 }
 
 
@@ -256,16 +261,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _LintRule&&(identical(other.name, name) || other.name == name)&&(identical(other.description, description) || other.description == description)&&const DeepCollectionEquality().equals(other._categories, _categories)&&(identical(other.state, state) || other.state == state)&&const DeepCollectionEquality().equals(other._incompatible, _incompatible)&&const DeepCollectionEquality().equals(other._sets, _sets)&&(identical(other.fixStatus, fixStatus) || other.fixStatus == fixStatus)&&(identical(other.details, details) || other.details == details)&&(identical(other.sinceDartSdk, sinceDartSdk) || other.sinceDartSdk == sinceDartSdk));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _LintRule&&(identical(other.name, name) || other.name == name)&&(identical(other.description, description) || other.description == description)&&const DeepCollectionEquality().equals(other.categories, _categories)&&(identical(other.state, state) || other.state == state)&&const DeepCollectionEquality().equals(other.incompatible, _incompatible)&&const DeepCollectionEquality().equals(other.sets, _sets)&&(identical(other.fixStatus, fixStatus) || other.fixStatus == fixStatus)&&(identical(other.details, details) || other.details == details)&&(identical(other.sinceDartSdk, sinceDartSdk) || other.sinceDartSdk == sinceDartSdk));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,name,description,const DeepCollectionEquality().hash(_categories),state,const DeepCollectionEquality().hash(_incompatible),const DeepCollectionEquality().hash(_sets),fixStatus,details,sinceDartSdk);
+int get hashCode {
+    return Object.hash(runtimeType,name,description,const DeepCollectionEquality().hash(_categories),state,const DeepCollectionEquality().hash(_incompatible),const DeepCollectionEquality().hash(_sets),fixStatus,details,sinceDartSdk);
+}
 
 @override
 String toString() {
-  return 'LintRule(name: $name, description: $description, categories: $categories, state: $state, incompatible: $incompatible, sets: $sets, fixStatus: $fixStatus, details: $details, sinceDartSdk: $sinceDartSdk)';
+    return 'LintRule(name: $name, description: $description, categories: $categories, state: $state, incompatible: $incompatible, sets: $sets, fixStatus: $fixStatus, details: $details, sinceDartSdk: $sinceDartSdk)';
 }
 
 
